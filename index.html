@@ -5,18 +5,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Purple Summer Wellness home page" />
 		<meta name="keywords" content="wellness, reiki, reflexology" />
-		<title>purple summer wellness</title>
+		<title>Purple Summer Wellness</title>
+		<style>
+			body {
+				text-align: center; /* centers text and inline-blocks like images */
+				margin: 0;
+				font-family: sans-serif;
+			}
+			.container {
+				display: flex;
+				flex-direction: column; /* stack elements vertically */
+				align-items: center; /* horizontal centering */
+				justify-content: center;
+			}
+			img {
+				display: block; /* prevents extra inline spacing */
+				margin: 20px 0; /* spacing between images/text */
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Purple Summer Wellness</h1>
-		<h2>coming soon</h2>
-		<p>
+		<div class="container">
+			<img
+				height="348"
+				width="500"
+				src="./img/psw_lotus_500.png"
+				alt="Purple Summer Wellness"
+			/>
+			<h2>Coming Soon</h2>
 			<img
 				height="200"
 				width="200"
 				src="./img/ARCB-transparent-200.png"
 				alt="ARCB Certified"
 			/>
-		</p>
+		</div>
 	</body>
 </html>
