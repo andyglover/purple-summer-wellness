@@ -2,58 +2,103 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+		/>
 		<meta name="description" content="Purple Summer Wellness home page" />
 		<meta name="keywords" content="wellness, reiki, reflexology" />
 		<title>Purple Summer Wellness</title>
 		<style>
+			:root {
+				--page-pad: 16px; /* comfy edge padding on phones */
+				--content-max: 720px; /* optional max line length on large screens */
+				--gap-lg: 50px;
+				--gap-md: 20px;
+			}
+
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden; /* belt-and-suspenders to avoid horizontal scroll */
+			}
+
 			body {
 				text-align: center;
-				margin: 0;
-				font-family: sans-serif;
+				font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+				background: #fff;
+				color: #111;
 			}
+
 			.container {
 				display: flex;
-				flex-direction: column; /* stack vertically */
+				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+
+				/* keep content inside screen edges */
+				padding: 0 var(--page-pad);
+				max-width: var(--content-max);
+				margin: 0 auto;
+				box-sizing: border-box;
 			}
+
+			/* Make all images responsive */
 			img {
 				display: block;
+				max-width: 100%;
+				height: auto;
 			}
+
 			.logos {
 				display: flex;
-				gap: 20px; /* space between ARCB and WRA logos */
-				margin-top: 50px; /* more space above logos */
+				gap: var(--gap-md);
+				margin-top: var(--gap-lg);
+				flex-wrap: wrap; /* so they wrap on very small screens */
+				justify-content: center;
+			}
+
+			h1,
+			h2,
+			h3 {
+				margin: 0.4em 0;
+				padding: 0;
+				line-height: 1.2;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<h1>Purple Summer Wellness</h1>
+			<!-- Heading is visible by default; gets hidden only if logo loads -->
+			<h1 id="siteTitle">Purple Summer Wellness</h1>
 
 			<img
-				height="348"
-				width="500"
+				id="siteLogo"
 				src="./img/psw_lotus_500.png"
-				alt="Lotus Logo"
+				alt="Purple Summer Wellness lotus logo"
+				width="500"
+				height="348"
+				onload="document.getElementById('siteTitle').hidden = true;"
+				onerror="document.getElementById('siteTitle').hidden = false;"
 			/>
 
 			<h2>Coming Soon - Stay Tuned!</h2>
 			<h3>Anything worth having takes time...</h3>
 
+			<!-- Toggle this when you’re ready to show the certification logos -->
 			<div class="logos" style="display: none">
 				<img
-					height="200"
-					width="200"
 					src="./img/ARCB-transparent-200.png"
 					alt="ARCB Certified"
+					width="200"
+					height="200"
 				/>
 				<img
-					height="200"
-					width="200"
 					src="./img/WRA-transparent-200.png"
 					alt="WRA Certified"
+					width="200"
+					height="200"
 				/>
 			</div>
 		</div>
