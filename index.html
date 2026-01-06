@@ -78,6 +78,30 @@
 				padding: 0;
 				line-height: 1.2;
 			}
+
+			.booking-button {
+				display: inline-block;
+				margin-top: var(--gap-md);
+				padding: 30px 70px;
+				border-radius: 999px;
+				background: #e8e8fb;
+				color: #2f2a3d;
+				font-family: var(--yanone-font);
+				font-size: 2.875rem;
+				letter-spacing: 0.06em;
+				text-decoration: none;
+				text-transform: uppercase;
+				box-shadow: 0 10px 24px rgba(47, 42, 61, 0.18);
+				transition: background-color 0.2s ease, transform 0.2s ease,
+					box-shadow 0.2s ease;
+			}
+
+			.booking-button:hover,
+			.booking-button:focus-visible {
+				background: #d6d6f4;
+				transform: translateY(-1px);
+				box-shadow: 0 12px 26px rgba(47, 42, 61, 0.22);
+			}
 		</style>
 	</head>
 	<body class="home">
@@ -97,8 +121,15 @@
 
 			<h2>Coming Soon - Stay Tuned!</h2>
 			<h3>Anything worth having takes time...</h3>
+			<a
+				class="booking-button"
+				href="https://pocketsuite.io/book/purple-summer-wellness-llc"
+				target="_blank"
+			>
+				Book Now
+			</a>
 
-			<!-- Toggle this when you’re ready to show the certification logos -->
+			<!-- Toggle this when you're ready to show the certification logos -->
 			<div class="logos">
 				<!-- style="display: none" -->
 				<img
