@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -26,7 +26,7 @@
 							alt="Purple Summer Wellness"
 							class="main-logo"
 						/>
-						<div class="license-info">LEILANI SAPER RF# 70034854</div>
+						<div class="license-info">LEILANI SAPER RF#70034854</div>
 					</div>
 					<button
 						class="nav-toggle"
@@ -421,7 +421,7 @@
 				? aboutItem.querySelector('a[href="#about"]')
 				: null;
 			const aboutLinks = document.querySelectorAll(
-				'.nav-item a[href="#about"], .subnav-row a'
+				'.nav-item a[href="#about"], .subnav-row a',
 			);
 			let isAboutActive = false;
 			let aboutCloseTimeout = null;
@@ -470,7 +470,7 @@
 				const offset = getHeaderOffset();
 				document.documentElement.style.setProperty(
 					"--header-offset",
-					`${offset}px`
+					`${offset}px`,
 				);
 			};
 
@@ -489,7 +489,7 @@
 				});
 				if (aboutItem && aboutLinks.length) {
 					isAboutActive = Array.from(aboutLinks).some((link) =>
-						link.classList.contains("active")
+						link.classList.contains("active"),
 					);
 					navBar.classList.toggle("about-open", isAboutActive);
 					if (!isAboutActive) {
